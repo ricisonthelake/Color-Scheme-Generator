@@ -1,0 +1,72 @@
+<!-- 
+Requirements
+    1. Choose "seed color" with an <input type = "color"/>
+    2. Choose color scheme mode in a <select> box
+    3. Clicking button makes a request to The Color API to get a color scheme
+    4. Display the scheme colors and hex values on the page
+    5. Stretch Goal: click hex values or colors to copy to clipboard
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <h1>Color Scheme Generator</h1>
+    </header>
+    <div class="wrapper">
+
+        <section class="generator-input">
+            <input type="color" class="seed-color" id="seed-color">
+
+            <select class="scheme-mode-selector" id="scheme-mode-selector">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+            </select>
+
+            <button class="get-btn" id="get-btn">Get Color Scheme</button>
+        </section>
+        <section class="palette-container container-flex" id="palette-container">
+            <div id="palette-color-1" class="palette-colors" style="background-color: #C01010" onclick="copyToClipboard('C01010')"></div>
+            <div id="palette-color-2" class="palette-colors" style="background-color: #ED1515" onclick="copyToClipboard('ED1515')"></div>
+            <div id="palette-color-3" class="palette-colors" style="background-color: #F24444" onclick="copyToClipboard('F24444')"></div>
+            <div id="palette-color-4" class="palette-colors" style="background-color: #F67373" onclick="copyToClipboard('F67373')"></div>
+            <div id="palette-color-5" class="palette-colors" style="background-color: #F9A2A2" onclick="copyToClipboard('F9A2A2')"></div>
+
+        </section>
+        <footer class="hex-footer container-flex" id="hex-footer">
+            <div id="hex-color-1" class="hex-colors" onclick="copyToClipboard('C01010')">#C01010</div>
+            <div id="hex-color-2" class="hex-colors" onclick="copyToClipboard('ED1515')">#ED1515</div>
+            <div id="hex-color-3" class="hex-colors" onclick="copyToClipboard('F24444')">#F24444</div>
+            <div id="hex-color-4" class="hex-colors" onclick="copyToClipboard('F67373')">#F67373</div>
+            <div id="hex-color-5" class="hex-colors" onclick="copyToClipboard('F9A2A2')">#F9A2A2</div>
+            
+
+        </footer>
+
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
+<!-- 
+             -->
